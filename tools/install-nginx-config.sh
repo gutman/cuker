@@ -3,7 +3,7 @@
 SITES_AVAILABLE=/usr/local/etc/nginx/sites-available
 SITES_ENABLED=/usr/local/etc/nginx/sites-enabled
 
-ROOT_DIR=`cd $(dirname $0); pwd`
+ROOT_DIR=`cd $(dirname $0)/..; pwd`
 
 mkdir -p SITES_AVAILABLE SITES_ENABLED
 
