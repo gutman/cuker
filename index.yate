@@ -1,0 +1,12 @@
+match / {
+    html("<!DOCTYPE html>")
+    <html>
+        <head>
+            <title>{ .title }</title>
+            <link rel="stylesheet" href="index.css"/>
+        </head>
+        <body>
+            .index.content
+        </body>
+    </html>
+}
