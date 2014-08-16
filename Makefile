@@ -1,6 +1,4 @@
-all :
-	html
-	css
+all : html css
 
 html :
 	yate index.yate locale/ru.json > index_ru.html
