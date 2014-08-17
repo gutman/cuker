@@ -2,8 +2,13 @@ match / {
     html("<!DOCTYPE html>")
     <html>
         <head>
+            <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+
             <title>{ .title }</title>
-            <link rel="stylesheet" href="index.css"/>
+
+            <link href="/index.css" rel="stylesheet"/>
+            <link href="//fonts.googleapis.com/css?family=EB+Garamond&subset=cyrillic,latin" rel="stylesheet" type="text/css"/>
+            <!--<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">-->
         </head>
         <body>
             .index.content
