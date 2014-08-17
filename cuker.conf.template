@@ -1,9 +1,27 @@
+map $http_accept_language $header_lang {
+    default en;
+    ~*^en en;
+    ~*^ru ru;
+    ~*en en;
+    ~*ru ru;
+}
+
+map $cookie_lang $lang {
+    default $header_lang;
+    en en;
+    ru ru;
+}
+
 server {
     listen       8888;
     server_name  localhost;
- 
-    location / {
-        root   @ROOT_DIR@;
-        index  index.html;
+
+    location = / {
+        return 302 $scheme://$host:$server_port/$lang$uri$is_args$args;
+    }
+
+    location ~ '^/\D{2}/.*' {
+        root @ROOT_DIR@/html;
+        index index.html;
     }
 }
