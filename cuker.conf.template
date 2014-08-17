@@ -1,3 +1,5 @@
+root @ROOT_DIR@;
+
 map $http_accept_language $header_lang {
     default en;
     ~*^en en;
@@ -23,5 +25,10 @@ server {
     location ~ '^/\D{2}/.*' {
         root @ROOT_DIR@/html;
         index index.html;
+    }
+
+    location ~* \.(gif|html?|ico|jpe?g|json|png|svg|swf|txt|js|css)(\?.*)?$ {
+        expires 14d;
+        break;
     }
 }

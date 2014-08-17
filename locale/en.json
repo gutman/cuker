@@ -1,5 +1,12 @@
 {
     "title": "Max Cuker",
+    "name": "Max Cuker",
+    "guitars": "Classical guitars",
+    "menu": {
+        "about": "About me",
+        "history": "History",
+        "contact": "Contact"
+    },
     "index": {
         "title": "",
         "content": "Hello, World!"

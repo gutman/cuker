@@ -1,4 +1,59 @@
 body {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1200px;
+    min-width: 600px;
     background: #fff;
-    font: 'EB Garamond', 'Times New Roman', 'Times', serif 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.head {
+    padding: 10px 0 20px;
+    border-bottom: 1px solid #a3a3a3;
+    font-family: 'Tinos', 'Times New Roman', 'Times', serif;
+
+    &__name {
+        font-size: 68px;
+    }
+
+    &__guitars {
+        margin-top: -10px;
+        font-size: 22px;
+        color: #666;
+        text-transform: lowercase;
+    }
+}
+
+.nav {
+    text-align: center;
+
+    &__item {
+        display: inline-block;
+        margin: 2px;
+        padding: 14px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 14px;
+
+        &,
+        &:link,
+        &:visited {
+            color: #333;
+        }
+
+        &:hover {
+            background: #666;
+            color: #fff;
+        }
+    }
+}
+
+.stripe {
+    height: 130px;
+    background-image: url(/img/stripe1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
