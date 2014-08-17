@@ -12,4 +12,7 @@ html :
 css :
 	@stylus index.styl
 
-.PHONY: html css
+nginx :
+	tools/install-nginx-config.sh
+
+.PHONY: html css nginx
