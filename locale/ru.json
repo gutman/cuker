@@ -4,8 +4,11 @@
     "guitars": "Классические гитары",
     "menu": {
         "about": "Обо мне",
-        "history": "История",
-        "contact": "Контактная информация"
+        "models": "Модели",
+        "gallery": "Галерея",
+        "media": "Аудио и видео",
+        "testimonials": "Отзывы",
+        "contact": "Контакты"
     },
     "index": {
         "title": "",

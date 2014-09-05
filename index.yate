@@ -7,7 +7,7 @@ match / {
             <title>{ .title }</title>
 
             <link href="/index.css" rel="stylesheet"/>
-            <link href="//fonts.googleapis.com/css?family=Tinos&subset=latin,cyrillic" rel="stylesheet" type="text/css"/>
+            <link href="//fonts.googleapis.com/css?family=Tinos:400,400italic&subset=latin,cyrillic" rel="stylesheet" type="text/css"/>
             <!--<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">-->
         </head>
         <body>
@@ -16,11 +16,22 @@ match / {
                 <div class="head__guitars">{ .guitars }</div>
             </header>
             <nav class="nav">
-                <a class="nav__item" href="/about/">{ .menu.about }</a>
-                <a class="nav__item" href="/history/">{ .menu.history }</a>
-                <a class="nav__item" href="/contact/">{ .menu.contact }</a>
+                apply .menu.* nav__item
             </nav>
             <div class="stripe"></div>
+            <div class="page-index">
+                <h1>Привет, я гитарный мастер из Вильнюса</h1>
+                <img class="page-index__photo" src="/img/cuker.jpg" alt=""/>
+                <div class="page-index__content">
+                    <p>Лошадь купила четыре калоши: пару хороших и пару поплоше.</p>
+                    <p>Статус художника последовательно перечеркивает эксцентриситет. Тукан, на первый взгляд, изящно отражает синтаксис искусства. Засветка неба выслеживает перигелий. Орбита, в первом приближении, вызывает резкий математический горизонт. Pадиотелескоп Максвелла представляет собой космический мусор.</p>
+                    <p>Мера меняет структурализм. Выявляя устойчивые архетипы на примере художественного творчества, можно сказать, что газопылевое облако перечеркивает элитарный синхронический подход, тем не менее, Дон Еманс включил в список всего 82-е Великие Кометы. Статус художника, сублимиpуя с повеpхности ядpа кометы, решает межпланетный часовой угол.</p>
+                </div>
+            </div>
         </body>
     </html>
+}
+
+match .* nav__item {
+    <a class="nav__item" href="/{ name() }/">{ . }</a>
 }

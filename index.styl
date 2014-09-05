@@ -1,31 +1,61 @@
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+        border-collapse: collapse;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// =====================================
+
+html {
+    background-image: url(img/bg.jpg);
+}
+
 body {
     margin: 0 auto;
-    padding: 0;
-    max-width: 1200px;
+    padding: 0 20px 20px;
+    max-width: 900px;
     min-width: 600px;
     background: #fff;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
 
+h1 {
+    padding: 0;
+    margin: 0 0 10px;
+    font-size: 26px;
+    font-family: 'Tinos', 'Times New Roman', 'Times', serif;
+    font-style: italic;
+}
+
+// =====================================
+
 .head {
     padding: 10px 0 20px;
-    border-bottom: 1px solid #a3a3a3;
     font-family: 'Tinos', 'Times New Roman', 'Times', serif;
 
     &__name {
-        font-size: 68px;
+        font-size: 58px;
     }
 
     &__guitars {
         margin-top: -10px;
-        font-size: 22px;
+        font-size: 20px;
         color: #666;
         text-transform: lowercase;
     }
 }
 
 .nav {
+    border-top: 1px solid #a3a3a3;
     text-align: center;
 
     &__item {
@@ -46,14 +76,38 @@ body {
             background: #666;
             color: #fff;
         }
+
+        &_current {
+            box-shadow: 0 -4px 0px #666 inset;
+
+            &:hover {
+                background: inherit;
+                color: inherit;
+                cursor: default;
+            }
+        }
     }
 }
 
 .stripe {
-    height: 130px;
+    height: 200px;
+    margin-bottom: 40px;
     background-image: url(/img/stripe1.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-background-size: cover;
     background-size: cover;
+}
+
+.page-index {
+    clearfix();
+
+    &__photo {
+        float: left;
+        width: 400px;
+    }
+
+    &__content {
+        margin-left: 420px;
+    }
 }
