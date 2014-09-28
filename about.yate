@@ -1,4 +1,4 @@
-PAGENAME = "index"
+PAGENAME = "about"
 include "common.yate"
 
 match .* content {

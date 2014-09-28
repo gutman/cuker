@@ -1,4 +1,5 @@
 {
+    "lang": "en",
     "title": "Max Cuker",
     "name": "Max Cuker",
     "guitars": "Classical guitars",
@@ -8,7 +9,6 @@
         "contact": "Contact"
     },
     "index": {
-        "title": "",
-        "content": "Hello, World!"
+        "content": "<h2>Welcome!</h2><p>My mane is Maxim Cuker.</p>"
     }
 }
