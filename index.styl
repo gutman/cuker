@@ -1,3 +1,19 @@
+$font-default = Arial, Helvetica, sans-serif
+$font-caption = 'Tinos', 'Times New Roman', 'Times', serif
+
+$color = #000
+$color-muted = #666
+$color-light = #a3a3a3
+$color-inverted = #fff
+
+$bg = #fff
+$bg-hover = #666
+
+$border-thin = #a3a3a3
+
+$nav-link = #333
+$nav-current = #666
+
 // The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
 clearfix() {
     &:before,
@@ -23,39 +39,78 @@ body {
     padding: 0 20px 20px;
     max-width: 900px;
     min-width: 600px;
-    background: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    background: $bg;
+    font-family: $font-default;
     font-size: 14px;
+    color: $color;
 }
 
 h2 {
     padding: 0;
     margin: 0 0 10px;
     font-size: 26px;
-    font-family: 'Tinos', 'Times New Roman', 'Times', serif;
+    font-family: $font-caption;
     font-style: italic;
 }
 
 // =====================================
 
 .head {
+    position: relative;
     padding: 10px 0 20px;
-    font-family: 'Tinos', 'Times New Roman', 'Times', serif;
 
     &__name {
         font-size: 58px;
+        font-family: $font-caption;
     }
 
     &__guitars {
         margin-top: -10px;
         font-size: 20px;
-        color: #666;
+        color: $color-muted;
         text-transform: lowercase;
+        font-family: $font-caption;
+    }
+
+    &__langs {
+        position: absolute;
+        top: 20px;
+        right: 0;
+    }
+}
+
+.langs {
+    &__lang {
+        display: inline-block;
+        padding: 4px 6px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 14px;
+
+        &,
+        &:link,
+        &:visited {
+            color: $nav-link;
+        }
+
+        &:hover {
+            background: $bg-hover;
+            color: $color-inverted;
+        }
+
+        &_current {
+            color: $color-light;
+
+            &:hover {
+                background: inherit;
+                color: @color;
+            }
+        }
     }
 }
 
 .nav {
-    border-top: 1px solid #a3a3a3;
+    border-top: 1px solid $border-thin;
     text-align: center;
 
     &__item {
@@ -69,16 +124,16 @@ h2 {
         &,
         &:link,
         &:visited {
-            color: #333;
+            color: $nav-link;
         }
 
         &:hover {
-            background: #666;
-            color: #fff;
+            background: $bg-hover;
+            color: $color-inverted;
         }
 
         &_current {
-            box-shadow: 0 -4px 0px #666 inset;
+            box-shadow: 0 -4px 0px $nav-current inset;
 
             &:hover {
                 background: inherit;

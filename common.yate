@@ -1,3 +1,5 @@
+LANG = scalar(/.lang)
+
 match / {
     html("<!DOCTYPE html>")
     <html>
@@ -14,9 +16,12 @@ match / {
             <header class="head">
                 <div class="head__name">{ .name }</div>
                 <div class="head__guitars">{ .guitars }</div>
+                <div class="head__langs langs">
+                    apply .langs langs
+                </div>
             </header>
             <nav class="nav">
-                apply .menu.* nav__item (scalar(.lang))
+                apply .menu.* nav__item
             </nav>
             <div class="stripe"></div>
             apply . content
@@ -24,11 +29,19 @@ match / {
     </html>
 }
 
-match .* nav__item (lang) {
-    <a class="nav__item" href="/{ lang }/{ name() }/">
+match .* nav__item {
+    <a class="nav__item" href="/{ LANG }/{ name() }/">
         if name() == PAGENAME {
             @class += "nav__item_current"
         }
         .
     </a>
+}
+
+match .* langs {
+    currentPage = if PAGENAME == "index" { "" } else { "{PAGENAME}/" }
+    <a class="langs__lang" href="/{ . }/{ currentPage }">{ . }</a>
+}
+match .*[ . == LANG ] langs {
+    <span class="langs__lang langs__lang_current">{ . }</span>
 }
