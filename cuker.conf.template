@@ -17,14 +17,16 @@ map $cookie_lang $lang {
 server {
     listen       8888;
     server_name  localhost;
+    rewrite '^(/\D{2})/(contact|about|models|gallery|media|testimonials)/$' $1/$2;
 
     location = / {
         return 302 $scheme://$host:$server_port/$lang$uri$is_args$args;
     }
 
-    location ~ '^/\D{2}/.*' {
+    location ~ '^/\D{2}(/.*)?$' {
         root @ROOT_DIR@/html;
         index index.html;
+        try_files $uri $uri/index.html $uri.html =404;
     }
 
     location ~* \.(gif|html?|ico|jpe?g|json|png|svg|swf|txt|js|css)(\?.*)?$ {
