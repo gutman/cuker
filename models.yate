@@ -1,0 +1,22 @@
+PAGENAME = "models"
+include "common.yate"
+
+match .* content {
+    apply .models page-models
+}
+
+match .models page-models {
+    <div class="page-models">
+        apply .* page-models__model
+    </div>
+}
+
+match .* page-models__model {
+    <div class="page-models__model">
+        <div class="page-models__photos">
+
+        </div>
+        <h2>{ name() }</h2>
+        <div class="page-models__text">{ html(.content) }</div>
+    </div>
+}

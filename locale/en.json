@@ -5,11 +5,21 @@
     "name": "Max Cuker",
     "guitars": "Classical guitars",
     "menu": {
-        "about": "About me",
+        "index": "About me",
         "history": "History",
         "contact": "Contact"
     },
     "index": {
         "content": "<h2>Welcome!</h2><p>My mane is Maxim Cuker.</p>"
+    },
+    "models": {
+        "Анна": {
+            "photos": [ "anna1", "anna2" ],
+            "content": "<p>Это Анна, моя первая гитара</p>"
+        },
+        "Ирина": {
+            "photos": [ "irina1", "irina2" ],
+            "content": "<p>Это Ирина, моя вторая гитара</p>"
+        }
     }
 }

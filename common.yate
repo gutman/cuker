@@ -30,9 +30,10 @@ match / {
 }
 
 match .* nav__item {
-    <a class="nav__item" href="/{ LANG }/{ name() }/">
+    path = if name() == "index" { "" } else { "{ name() }/" }
+    <a class="nav__item" href="/{ LANG }/{ path }">
         if name() == PAGENAME {
-            @class += "nav__item_current"
+            @class += " nav__item_current"
         }
         .
     </a>

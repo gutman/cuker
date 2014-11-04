@@ -1,5 +1,5 @@
 LANGS = 'en' 'ru'
-PAGES = 'index' 'about'
+PAGES = 'index' 'models'
 
 all : html css
 
