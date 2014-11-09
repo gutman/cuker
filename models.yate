@@ -14,9 +14,18 @@ match .models page-models {
 match .* page-models__model {
     <div class="page-models__model">
         <div class="page-models__photos">
-
+            apply .photos page-models__photo
         </div>
         <h2>{ name() }</h2>
         <div class="page-models__text text">{ html(.content) }</div>
     </div>
+}
+
+match .* page-models__photo {
+    name = name(..)
+    size = if index() == 0 { "big" } else { "small" }
+    <a class="page-models__photo" href="/img/gallery/big/{ . }.jpg" data-lightbox="{ name }" data-title="{ name }">
+        if index() == 0 { @class += " page-models__photo_main" }
+        <img src="/img/gallery/{ size }/{ . }.jpg" alt="{ name }"/>
+    </a>
 }

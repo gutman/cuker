@@ -13,9 +13,9 @@ match .gallery page-gallery {
 }
 
 match .* page-gallery__image {
-    picture = "/img/gallery/big/{ .url }"
-    thumbnail = "/img/gallery/small/{ .url }"
-    <a href="{ picture }.jpg" class="page-gallery__image" data-lightbox="gallery" data-title="{ .title }">
-        <img src="{ thumbnail }.jpg" alt=""/>
+    picture = "/img/gallery/big/{ .url }.jpg"
+    thumbnail = "/img/gallery/small/{ .url }.jpg"
+    <a href="{ picture }" class="page-gallery__image" data-lightbox="gallery" data-title="{ .title }">
+        <img src="{ thumbnail }" alt=""/>
     </a>
 }
