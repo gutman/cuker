@@ -31,14 +31,17 @@ clearfix() {
 // =====================================
 
 html {
-    background-image: url(img/bg.jpg);
+    background: #eee;
+    //background-image: url(img/bg.jpg);
 }
 
 body {
-    margin: 0 auto;
-    padding: 0 20px 60px;
+    margin: 0 auto 20px;
+    padding: 0 20px 20px;
     max-width: 900px;
     min-width: 600px;
+    border: 1px solid #ccc;
+    border-top: none;
     background: $bg;
     font-family: $font-default;
     font-size: 14px;
@@ -154,6 +157,10 @@ h2 {
     background-size: cover;
 }
 
+.text {
+    line-height: 1.4;
+}
+
 // =====================================
 
 .page-index {
@@ -187,3 +194,17 @@ h2 {
         background: #666;
     }
 }
+
+.page-gallery {
+    &__image {
+        display: inline-block;
+        margin: 0 20px 20px 0;
+
+        img {
+            border: none;
+            width: 100px;
+        }
+    }
+}
+
+@require "lightbox/css/lightbox.css";

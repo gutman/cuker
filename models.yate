@@ -17,6 +17,6 @@ match .* page-models__model {
 
         </div>
         <h2>{ name() }</h2>
-        <div class="page-models__text">{ html(.content) }</div>
+        <div class="page-models__text text">{ html(.content) }</div>
     </div>
 }

@@ -1,5 +1,5 @@
 LANGS = 'en' 'ru'
-PAGES = 'index' 'models'
+PAGES = 'index' 'models' 'gallery'
 
 all : html css
 
@@ -13,7 +13,7 @@ html :
 	done
 
 css :
-	@stylus index.styl
+	@stylus --include-css -r index.styl
 
 nginx :
 	tools/install-nginx-config.sh

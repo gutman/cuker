@@ -1,0 +1,20 @@
+PAGENAME = "gallery"
+include "common.yate"
+
+match .* content {
+    apply .gallery page-gallery
+}
+
+match .gallery page-gallery {
+    <div class="page-gallery">
+        <h2>{ .title }</h2>
+        apply .images page-gallery__image
+    </div>
+}
+
+match .* page-gallery__image {
+    url = "/img/gallery/{ .url }"
+    <a href="{ url }.jpg" class="page-gallery__image" data-lightbox="gallery" data-title="{ .title }">
+        <img src="{ url }.jpg" alt=""/>
+    </a>
+}

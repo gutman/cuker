@@ -8,9 +8,11 @@ match / {
 
             <title>{ .title }</title>
 
+            <!--<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">-->
             <link href="/index.css" rel="stylesheet"/>
             <link href="//fonts.googleapis.com/css?family=Tinos:400,400italic&subset=latin,cyrillic" rel="stylesheet" type="text/css"/>
-            <!--<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">-->
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script src="/lightbox/js/lightbox.min.js"></script>
         </head>
         <body>
             <header class="head">

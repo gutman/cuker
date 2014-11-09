@@ -21,5 +21,18 @@
             "photos": [ "irina1", "irina2" ],
             "content": "<p>Это Ирина, моя вторая гитара</p>"
         }
+    },
+    "gallery": {
+        "title": "Gallery",
+        "images": [
+            {
+                "url": "1",
+                "title": "Гитара на диване"
+            },
+            {
+                "url": "2",
+                "title": "Гитара у стены"
+            }
+        ]
     }
 }

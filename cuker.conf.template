@@ -17,7 +17,7 @@ map $cookie_lang $lang {
 server {
     listen       8888;
     server_name  localhost;
-    rewrite '^(/\D{2})/(contact|about|models|gallery|media|testimonials)/$' $1/$2;
+    rewrite '^(/\D{2})/(contact|models|gallery|media|testimonials)/$' $1/$2;
 
     location = / {
         return 302 $scheme://$host:$server_port/$lang$uri$is_args$args;
