@@ -18,6 +18,11 @@ match .* page-models__model {
         </div>
         <h2>{ name() }</h2>
         <div class="page-models__text text">{ html(.content) }</div>
+        if .model-photos {
+            <div class="page-models__model-photos">
+                apply .model-photos page-models__model-photo
+            </div>
+        }
     </div>
 }
 
@@ -27,5 +32,12 @@ match .* page-models__photo {
     <a class="page-models__photo" href="/img/gallery/big/{ . }.jpg" data-lightbox="{ name }" data-title="{ name }">
         if index() == 0 { @class += " page-models__photo_main" }
         <img src="/img/gallery/{ size }/{ . }.jpg" alt="{ name }"/>
+    </a>
+}
+
+match .* page-models__model-photo {
+    name = name(..)
+    <a class="page-models__model-photo" href="/img/models/big/{ . }.jpg" data-lightbox="{ name }_model" data-title="{ name }">
+        <img src="/img/models/small/{ . }.jpg" alt="{ name }"/>
     </a>
 }
