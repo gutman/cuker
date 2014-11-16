@@ -1,0 +1,23 @@
+PAGENAME = "contact"
+include "common.yate"
+
+match .* content {
+    apply .contact page-contact
+}
+
+match .contact page-contact {
+    <div class="page-contact">
+        <h2>{ .title }</h2>
+        html( .content )
+        apply .links.* page-contact__link
+    </div>
+}
+
+match .* page-contact__link {
+    <div class="page-contact__link">
+        <a href="{ .href }">
+            <span class="page-contact__icon page-contact__icon_{ name() }"></span>
+            .text
+        </a>
+    </div>
+}

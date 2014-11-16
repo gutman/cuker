@@ -180,5 +180,19 @@
                 "title": "Гитара у стены"
             }
         ]
+    },
+    "contact": {
+        "title": "Contact",
+        "content": "<p>Vilnius, Lithuania</p>",
+        "links": {
+            "vk": {
+                "text": "My VK group",
+                "href": "http://vk.com/club57360296"
+            },
+            "fb": {
+                "text": "My Facebook page",
+                "href": "https://www.facebook.com/profile.php?id=100008158387320"
+            }
+        }
     }
 }
