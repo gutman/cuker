@@ -25,6 +25,15 @@
             "content": "<p>Это Анастасия, моя вторая гитара</p>"
         }
     },
+    "media": [
+        {"title": "Anastasia, spruce/maple", "id": "97uK7SFqLsE"},
+        {"title": "Anastasia, cedar/morado", "id": "RjZ20LYydC4"},
+        {"title": "Anastasia, cedar/sapelli", "id": "GlbfQ9QQ3ec"},
+        {"title": "Three guitars comparison", "id": "N1VJyA6w3_Y"},
+        {"title": "Double top guitar", "id": "mgg880N6rrM"},
+        {"title": "Another double top guitar", "id": "PhHe81wwKws"}
+    ],
+
     "gallery": {
         "title": "Gallery",
         "images": [
