@@ -12,6 +12,7 @@
         "contact": "Contact"
     },
     "index": {
+        "photo": "cuker3.jpg",
         "content": "<h2>Welcome!</h2><p>My mane is Maxim Cuker.</p>"
     },
     "models": {

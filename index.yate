@@ -7,7 +7,9 @@ match .* content {
 
 match .index page-index {
     <div class="page-index">
-        <img class="page-index__photo" src="/img/cuker2.jpg" alt=""/>
+        if .photo {
+            <img class="page-index__photo" src="/img/{ .photo }" alt=""/>
+        }
         <div class="page-index__content text">
             html(.content)
         </div>
