@@ -1,7 +1,16 @@
 #!/bin/sh -ex
 
-SITES_AVAILABLE=/usr/local/etc/nginx/sites-available
-SITES_ENABLED=/usr/local/etc/nginx/sites-enabled
+if [ -d "/usr/local/etc/nginx" ]; then
+  NGINX_HOME=/usr/local/etc/nginx #mac
+elif [ -d /etc/nginx ]; then
+  NGINX_HOME=/etc/nginx
+else
+  echo "Install nginx first"
+  exit 1
+fi
+
+SITES_AVAILABLE=$NGINX_HOME/sites-available
+SITES_ENABLED=$NGINX_HOME/sites-enabled
 
 ROOT_DIR=`cd $(dirname $0)/..; pwd`
 
