@@ -6,6 +6,8 @@
     "guitars": "Classical guitars",
     "menu": {
         "index": "About me",
+        "models": "Models",
+        "gallery": "Gallery",
         "history": "History",
         "contact": "Contact"
     },

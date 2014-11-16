@@ -25,7 +25,7 @@ match / {
             <nav class="nav">
                 apply .menu.* nav__item
             </nav>
-            <div class="stripe"></div>
+            <div class="stripe stripe_{ PAGENAME }"></div>
             apply . content
         </body>
     </html>

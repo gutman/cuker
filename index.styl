@@ -9,6 +9,7 @@ $color-inverted = #fff
 $bg = #fff
 $bg-hover = #666
 
+$border = #ccc
 $border-thin = #a3a3a3
 
 $nav-link = #333
@@ -31,8 +32,8 @@ clearfix() {
 // =====================================
 
 html {
-    background: #eee;
     //background-image: url(img/bg.jpg);
+    background: #f1ede8;
 }
 
 body {
@@ -40,7 +41,7 @@ body {
     padding: 0 20px 20px;
     max-width: 900px;
     min-width: 600px;
-    border: 1px solid #ccc;
+    border: 1px solid $border;
     border-top: none;
     background: $bg;
     font-family: $font-default;
@@ -123,6 +124,7 @@ h2 {
         text-transform: uppercase;
         text-decoration: none;
         font-size: 14px;
+        //transition: background 0.2s ease-out;
 
         &,
         &:link,
@@ -148,13 +150,25 @@ h2 {
 }
 
 .stripe {
-    height: 200px;
+    height: 100px;
     margin-bottom: 40px;
-    background-image: url(/img/stripe1.jpg);
+    background-image: url(/img/stripes/1.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-background-size: cover;
     background-size: cover;
+
+    &_index {
+        background-image: url(/img/stripes/4.jpg);
+    }
+
+    &_models {
+        background-image: url(/img/stripes/2.jpg);
+    }
+
+    &_gallery {
+        background-image: url(/img/stripes/3.jpg);
+    }
 }
 
 .text {
@@ -230,4 +244,4 @@ h2 {
     }
 }
 
-@require "lightbox/css/lightbox.css";
+@import "lightbox/css/lightbox.css";
