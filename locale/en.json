@@ -183,6 +183,10 @@
             }
         ]
     },
+    "testimonials": {
+        "title": "Testimonials",
+        "content": "<p>Everybody says my guitars are very good.</p>"
+    },
     "contact": {
         "title": "Contact",
         "content": "<p>Vilnius, Lithuania</p>",

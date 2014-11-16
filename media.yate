@@ -20,4 +20,3 @@ match .* page-media__video {
         .title
     </div>
 }
-

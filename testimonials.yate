@@ -1,0 +1,13 @@
+PAGENAME = "testimonials"
+include "common.yate"
+
+match .* content {
+    apply .testimonials page-testimonials
+}
+
+match .testimonials page-testimonials {
+    <div class="page-testimonials">
+        <h2>{ .title }</h2>
+        html( .content )
+    </div>
+}
