@@ -1,19 +1,19 @@
 $font-default = Arial, Helvetica, sans-serif
 $font-caption = 'Tinos', 'Times New Roman', 'Times', serif
 
-$color = #fae0a5
-$color-muted = #d8c28f
-$color-light = #ab9a73
+$color = #fff000
+$color-muted = #dbb400
+$color-light = #b79700
 $color-inverted = #000
 
 $bg = #000
-$bg-hover = #ab9a73
+$bg-hover = #b79700
 
-$border = #ab9a73
-$border-thin = #d8c28f
+$border = transparent
+$border-thin = #4a3d00
 
-$nav-link = #d8c28f
-$nav-current = #ab9a73
+$nav-link = #dbb400
+$nav-current = #b79700
 
 // The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
 clearfix() {
@@ -59,18 +59,18 @@ h2 {
 }
 
 a {
-    text-decoration: none;
+    //text-decoration: none;
 
     &, &:link {
-        color: #f5e9cf;
+        color: inherit;
     }
 
     &:visited {
-        color: #f5e9cf;
+        color: inherit;
     }
 
     &:hover {
-        color: #cc3333;
+        color: #f00;
     }
 }
 
@@ -150,8 +150,9 @@ a {
         }
 
         &:hover {
-            background: $bg-hover;
-            color: $color-inverted;
+            //background: $bg-hover;
+            //color: $color-inverted;
+            color: $color;
         }
 
         &_current {
