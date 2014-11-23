@@ -1,19 +1,31 @@
 $font-default = Arial, Helvetica, sans-serif
 $font-caption = 'Tinos', 'Times New Roman', 'Times', serif
 
-$color = #ffba00
-$color-muted = #d59c02
-$color-light = #865301
+$color = #926953
+$color-muted = #6a4d3d
+$color-light = #4e392e
 $color-inverted = #000
 
+$color-logo = #926953
+$color-logo2 = #926953
+
+$text = #926953
+
 $bg = #000
-$bg-hover = #865301
+//$bg-hover = #8ce7ed
+$bg-hover = #926953
 
 $border = transparent
-$border-thin = #4a3d00
+$border-thin = #4e392e
 
-$nav-link = #ff9e00
-$nav-current = #b67100
+$nav-link = #926953
+$nav-current = #6a4d3d
+//$nav-selection = #8ce7ed
+$nav-selection = #926953
+
+$link = #926953
+//$link-hover = #8ce7ed
+$link-hover = #926953
 
 // The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
 clearfix() {
@@ -56,21 +68,22 @@ h2 {
     font-size: 26px;
     font-family: $font-caption;
     font-style: italic;
+    color: $color;
 }
 
 a {
     //text-decoration: none;
 
     &, &:link {
-        color: inherit;
+        color: $link
     }
 
     &:visited {
-        color: inherit;
+        color: $link;
     }
 
     &:hover {
-        color: #f00;
+        color: $link-hover;
     }
 }
 
@@ -83,14 +96,15 @@ a {
     &__name {
         font-size: 58px;
         font-family: $font-caption;
+        color: $color-logo;
     }
 
     &__guitars {
         margin-top: -10px;
         font-size: 20px;
-        color: $color-muted;
         text-transform: lowercase;
         font-family: $font-caption;
+        color: $color-logo2;
     }
 
     &__langs {
@@ -150,13 +164,13 @@ a {
         }
 
         &:hover {
-            //background: $bg-hover;
-            //color: $color-inverted;
-            color: $color;
+            background: $bg-hover;
+            color: $color-inverted;
+            //color: $color;
         }
 
         &_current {
-            box-shadow: 0 -4px 0px $nav-current inset;
+            box-shadow: 0 -4px 0px $nav-selection inset;
 
             &:hover {
                 background: inherit;
@@ -203,6 +217,7 @@ a {
 
 .text {
     line-height: 1.4;
+    color: $text;
 }
 
 // =====================================
