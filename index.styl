@@ -1,5 +1,5 @@
-$font-default = Arial, Helvetica, sans-serif
-$font-caption = 'Tinos', 'Times New Roman', 'Times', serif
+$font-default = 'Benguiat', Arial, Helvetica, sans-serif
+$font-caption = 'Victoriana', 'Times New Roman', 'Times', serif
 
 $color = #926953
 $color-muted = #6a4d3d
@@ -43,6 +43,26 @@ clearfix() {
 
 // =====================================
 
+@font-face {
+    font-family: 'Benguiat';
+    src: url("/fonts/benguiat.eot?#iefix") format("embedded-opentype"),
+         url("/fonts/benguiat.woff") format("woff"),
+         url("/fonts/benguiat.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Victoriana';
+    src: url("/fonts/victoriana.eot?#iefix") format("embedded-opentype"),
+         url("/fonts/victoriana.woff") format("woff"),
+         url("/fonts/victoriana.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+// =====================================
+
 html {
     height: 100%;
     //background-image: url(img/bg.jpg);
@@ -70,8 +90,8 @@ h2 {
     padding: 0;
     margin: 0 0 10px;
     font-size: 26px;
-    font-family: $font-caption;
-    font-style: italic;
+    //font-family: $font-caption;
+    //font-style: italic;
     color: $color;
 }
 
@@ -108,6 +128,7 @@ a {
         font-size: 20px;
         text-transform: lowercase;
         font-family: $font-caption;
+        letter-spacing: 4.8px;
         color: $color-logo2;
     }
 
