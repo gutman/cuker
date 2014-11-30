@@ -71,15 +71,6 @@ html {
 }
 
 body {
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 0 20px 20px;
-    max-width: 900px + 2*20px;
-    min-width: 700px + 2*20px;
-    min-height: 100%;
-    border: 1px solid $border;
-    border-top: none;
-    border-bottom: none;
     background: $bg;
     font-family: $font-default;
     font-size: 14px;
@@ -112,27 +103,34 @@ a {
 
 // =====================================
 
+.layout {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 20px 20px;
+    max-width: 900px + 2*20px;
+    min-width: 700px + 2*20px;
+    min-height: 100%;
+    border: 1px solid $border;
+    border-top: none;
+    border-bottom: none;
+
+    &_index {
+        width: 100%;
+        height: 100%;
+        max-width: 3000px;
+        border: none;
+        padding: 0;
+    }
+}
+
+// =====================================
+
 .head {
     position: relative;
     padding: 15px 0;
 
     &__logo {
         display: inline-block;
-    }
-
-    &__name {
-        font-size: 58px;
-        font-family: $font-caption;
-        color: $color-logo;
-    }
-
-    &__guitars {
-        margin-top: -10px;
-        font-size: 20px;
-        text-transform: lowercase;
-        font-family: $font-caption;
-        letter-spacing: 4.8px;
-        color: $color-logo2;
     }
 
     &__langs {
@@ -251,6 +249,50 @@ a {
 // =====================================
 
 .page-index {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &__splash {
+        width: 100%;
+        height: 100%;
+        background: url(/img/splash.jpg) center center no-repeat #000;
+        background-size: cover;
+    }
+
+    &__head {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    &__logo {
+        display: inline-block;
+        width: 250px;
+    }
+
+    &__nav {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+
+        .nav {
+            position: relative;
+            left: -50%;
+        }
+    }
+
+    &__langs {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+.page-about {
     clearfix();
 
     &__photo {

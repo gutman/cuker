@@ -1,0 +1,17 @@
+PAGENAME = "about"
+include "common.yate"
+
+match .* content {
+    apply .about page-about
+}
+
+match .about page-about {
+    <div class="page-about">
+        if .photo {
+            <img class="page-about__photo" src="/img/{ .photo }" alt=""/>
+        }
+        <div class="page-about__content text">
+            html(.content)
+        </div>
+    </div>
+}

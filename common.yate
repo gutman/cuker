@@ -14,23 +14,37 @@ match / {
             <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <script src="/lightbox/js/lightbox.min.js"></script>
         </head>
-        <body>
-            <header class="head">
-                <img class="head__logo" src="/img/logo_{ LANG }.svg" alt="{ .name }. { .guitars }"/>
-                //<div class="head__name">{ .name }</div>
-                //<div class="head__guitars">{ .guitars }</div>
-                <div class="head__langs langs">
-                    apply .langs langs
-                </div>
-            </header>
-            <nav class="nav">
-                apply .menu.* nav__item
-            </nav>
-            <div class="stripe stripe_{ PAGENAME }"></div>
-            apply . content
-        </body>
+        apply . layout
     </html>
 }
+
+// Layout
+
+match .* layout {
+    <body class="layout">
+        <header class="head">
+            <a href="/{ LANG }/">
+                <img class="head__logo" src="/img/logo_{ LANG }.svg" alt="{ .name }. { .guitars }"/>
+            </a>
+            <div class="head__langs langs">
+                apply .langs langs
+            </div>
+        </header>
+        <nav class="nav">
+            apply .menu.* nav__item
+        </nav>
+        <div class="stripe stripe_{ PAGENAME }"></div>
+        apply . content
+    </body>
+}
+
+match .*[PAGENAME == "index"] layout {
+    <body class="layout layout_index">
+        apply . content
+    </body>
+}
+
+// ----
 
 match .* nav__item {
     path = if name() == "index" { "" } else { "{ name() }/" }
