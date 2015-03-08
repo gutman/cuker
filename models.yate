@@ -7,22 +7,16 @@ match .* content {
 
 match .models page-models {
     <div class="page-models">
-        apply .* page-models__model
+        <div class="page-models__content">{ html(.content) }</div>
+        <div class="page-models__photos">
+            apply .gallery.* page-models__model
+        </div>
     </div>
 }
 
 match .* page-models__model {
     <div class="page-models__model">
-        <div class="page-models__photos">
-            apply .photos page-models__photo
-        </div>
-        <h2>{ name() }</h2>
-        <div class="page-models__text text">{ html(.content) }</div>
-        if .model-photos {
-            <div class="page-models__model-photos">
-                apply .model-photos page-models__model-photo
-            </div>
-        }
+        apply .photos page-models__photo
     </div>
 }
 
