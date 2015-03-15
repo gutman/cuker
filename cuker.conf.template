@@ -15,8 +15,8 @@ map $cookie_lang $lang {
 }
 
 server {
-    listen       8888;
-    server_name  localhost;
+    listen       80;
+    server_name  cukerguitars.com;
     rewrite '^(/\D{2})/(about|contact|models|gallery|media|testimonials)/$' $1/$2;
 
     location = / {
