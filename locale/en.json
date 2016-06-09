@@ -32,6 +32,7 @@
     "media": {
         "title": "Video of my guitars",
         "videos": [
+            {"title": "Double top guitar, played by Anton Baranov", "id": "k840kwwfICc"},
             {"title": "Anastasia, cedar/morado", "id": "RjZ20LYydC4"},
             {"title": "Birute, cedar/sapelli", "id": "GlbfQ9QQ3ec"},
             {"title": "Three guitars comparison", "id": "N1VJyA6w3_Y"},
